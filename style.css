@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: #2e3235;
+  width: 550px;
+  height: 250px;
+  border-radius: 40px;
+  position: relative;
+  box-shadow: 4px 5px 18px 1px #000000;
+}
+.blue-joystick {
+  position: absolute;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  background-color: #4bb4eb;
+  box-shadow: inset 4px 5px 18px 1px #afe0f8;
+  width: 100px;
+
+  height: 100%;
+}
+
+.display-container {
+  position: absolute;
+  background-color: #000000;
+  width: 340px;
+  height: 95%;
+  left: 105px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.red-joystick {
+  position: absolute;
+  background-color: #eb6050;
+  box-shadow: inset 4px 5px 18px 1px #fc8d81;
+
+  width: 100px;
+  height: 100%;
+  right: 0;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+/* left controller */
+.left-stick {
+  background-color: black;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  left: 0;
+  right: 0;
+  bottom: 70%;
+  margin: auto;
+  border-radius: 50%;
+}
+.inside-left-stick {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 1px dashed #5d6369;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.square {
+  background-color: #5d6369;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 23px;
+  bottom: 17%;
+}
+.inside-square {
+  background-color: #2e3235;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.minus-btn {
+  width: 15px;
+  height: 5px;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+.top-btn {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.left-btn {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 20px;
+  bottom: 40%;
+  margin: auto;
+  border-radius: 50%;
+}
+.right-btn {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  right: 20px;
+  bottom: 40%;
+  margin: auto;
+  border-radius: 50%;
+}
+.bottom-btn {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 0;
+  right: 0;
+  bottom: 30%;
+  margin: auto;
+  border-radius: 50%;
+}
+/* right controller */
+.right-stick {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  left: 0;
+  right: 0;
+  bottom: 30%;
+  margin: auto;
+  border-radius: 50%;
+}
+.cross-btn {
+  width: 15px;
+  height: 5px;
+  position: absolute;
+  left: 10px;
+  top: 15px;
+}
+.crossy-btn {
+  width: 15px;
+  height: 5px;
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  transform: rotate(90deg);
+}
+.circle {
+  background-color: #5d6369;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 23px;
+  bottom: 17%;
+  border: 2px solid #2e3235;
+  border-radius: 50%;
+}
+.top-btn--right {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 0;
+  right: 0;
+  bottom: 80%;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.left-btn--right {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 20px;
+  bottom: 70%;
+  margin: auto;
+  border-radius: 50%;
+}
+.right-btn--right {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  right: 20px;
+  bottom: 70%;
+  margin: auto;
+  border-radius: 50%;
+}
+.bottom-btn--right {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 0;
+  right: 0;
+  bottom: 60%;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.shadow-btn {
+  box-shadow: 3px 5px 18px -3px rgba(0, 0, 0, 0.71);
+}
+.color-btn {
+  background-color: #2e3235;
+  color: #ccc;
+  text-align: center;
+}
+/* display ***************** */
+.display {
+  background-color: red;
+  width: 300px;
+  height: 210px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.bg-img {
+  background-image: url(https://cdn.wallpapersafari.com/94/27/kAZUrv.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
