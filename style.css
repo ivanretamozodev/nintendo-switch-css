@@ -8,6 +8,7 @@ body {
   height: 100vh;
   background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -47,14 +48,13 @@ body {
   position: absolute;
   background-color: #eb6050;
   box-shadow: inset 4px 5px 18px 1px #fc8d81;
-
   width: 100px;
   height: 100%;
   right: 0;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
 }
-/* left controller */
+/* left controller  **buttons and stick*/
 .left-stick {
   background-color: black;
   position: absolute;
@@ -72,10 +72,7 @@ body {
   height: 40px;
   border: 1px dashed #5d6369;
   border-radius: 50%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  inset: 0;
   margin: auto;
 }
 
@@ -93,10 +90,7 @@ body {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   margin: auto;
 }
 .minus-btn {
@@ -145,7 +139,47 @@ body {
   margin: auto;
   border-radius: 50%;
 }
-/* right controller */
+
+.arrow-up {
+  background-color: #1a1a1e;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  inset: 0;
+  margin: auto;
+}
+.arrow-left {
+  background-color: #1a1a1e;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform: rotateZ(-90deg);
+  inset: 0 0 0px -3px;
+  margin: auto;
+}
+.arrow-right {
+  background-color: #1a1a1e;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform: rotateZ(90deg);
+  inset: 0 0 0px 2px;
+  margin: auto;
+}
+.arrow-bottom {
+  background-color: #1a1a1e;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform: rotateZ(180deg);
+  inset: 0 0 0px 0px;
+  margin: auto;
+}
+/* right controller  right buittons and stick*/
 .right-stick {
   position: absolute;
   height: 50px;
@@ -220,25 +254,22 @@ body {
   margin: auto;
   border-radius: 50%;
 }
-
+/* aditionals colors and shadows */
 .shadow-btn {
   box-shadow: 3px 5px 18px -3px rgba(0, 0, 0, 0.71);
 }
 .color-btn {
   background-color: #2e3235;
-  color: #ccc;
+  color: #97979a;
   text-align: center;
 }
-/* display ***************** */
+/* display  and background***************** */
 .display {
   background-color: red;
   width: 300px;
   height: 210px;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
   margin: auto;
 }
 
@@ -247,4 +278,24 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (max-width: 600px) {
+  body {
+    height: 100vh;
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    background-color: #2e3235;
+    width: 550px;
+    height: 250px;
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 4px 5px 18px 1px #000000;
+    transform: rotate(90deg);
+  }
 }
